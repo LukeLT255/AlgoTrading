@@ -75,10 +75,10 @@ def everyMarketOpen():
         print('No positions found')
     symbolQuote = client.get_quotes(symbol).json()
     currentSymbolPrice = symbolQuote[symbol]['askPrice']
-    print('Yesterday close: ' + str(close[-1]))
+    print('Yesterday close: ' + str(close[-2]))
     h = max(highs[:-1])
     print('High: ' + str(h))
-    if symbol not in currentlyInvested and close[-1] >= max(highs[:-1]): # checks if we are currently invested, and if the last close was higher than the highest high, buy at market price
+    if symbol not in currentlyInvested and close[-2] >= max(highs[:-1]): # checks if we are currently invested, and if the last close was higher than the highest high, buy at market price
         if cashAvailableForTrading > currentSymbolPrice:
             print('Buy Order placed for ' + symbol + ' at ' + str(currentSymbolPrice) + '\n')
             client.place_order(config.account_id, equity_buy_market(symbol, 0))
@@ -99,14 +99,14 @@ def everyMarketOpen():
             print('Stop order sell placed for ' + symbol + 'at ' + str(initStopRisk * breakoutlvl) + '\n')
             client.place_order(config.account_id, equity_sell_limit(symbol, 1, initStopRisk * breakoutlvl))
 
-        if close[-1] > highestPrice and initStopRisk * breakoutlvl < close[-1] * trailingStopRisk: #makes this a trailing stop loss
-            highestPrice = close[-1]
+        if close[-1] > highestPrice and initStopRisk * breakoutlvl < close[-2] * trailingStopRisk: #makes this a trailing stop loss
+            highestPrice = close[-2]
             order_id = ''
             orders = client.get_orders_by_path(config.account_id, status=client.Order.Status.AWAITING_CONDITION)
             for order in orders:
                 if order['orderLegCollection'][0]['instrument']['symbol'] == symbol:
                     order_id = order['orderId']
-            stopPrice = close[-1] * trailingStopRisk
+            stopPrice = close[-2] * trailingStopRisk
             client.replace_order(config.account_id, order_id, equity_sell_limit(symbol, 1, stopPrice))
 
             print(f'New stop price for {symbol}: ' + str(stopPrice)) #print new stop price to terminal
