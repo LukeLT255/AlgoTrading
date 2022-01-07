@@ -2,5 +2,4 @@ tda-api
 selenium
 numpy
 schedule
-atexit
 datetime
