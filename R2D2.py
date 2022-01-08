@@ -9,6 +9,9 @@ import sys
 import tda
 import config
 import schedule
+import cronitor
+
+cronitor.api_key = config.cron_key
 
 lookBack = 20
 initStopRisk = 0.98
@@ -23,7 +26,13 @@ print(today.strftime('%D %T'))
 
 symbolList = ['NVDA', 'TSLA'] #symbol or symbols to use
 
-#run function here that runs every open of day of market
+#cron job to start trading bot
+cronitor.Monitor.put(
+    key='trading-bot',
+    type='job',
+    schedule='* 10 * * 1-5',
+    notify='LukeLT25@gmail.com'
+)
 
 def make_webdriver():
     # Import selenium here because it's slow to import
@@ -40,7 +49,7 @@ client = tda.auth.easy_client(
     config.token_path_lightsail,
     make_webdriver)
 
-
+@cronitor.job('trading-bot')
 def everyMarketOpen():
     for symbol in symbolList:
         dataForLastMonth = client.get_price_history_every_day(symbol, start_datetime=today - datetime.timedelta(days=31), end_datetime=today).json()
