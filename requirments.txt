@@ -3,3 +3,4 @@ selenium
 numpy
 schedule
 datetime
+cronitor
