@@ -27,12 +27,12 @@ print(today.strftime('%D %T'))
 symbolList = ['NVDA', 'TSLA'] #symbol or symbols to use
 
 #cron job to start trading bot
-cronitor.Monitor.put(
-    key='trading-bot',
-    type='job',
-    schedule='* 10 * * 1-5',
-    notify='LukeLT25@gmail.com'
-)
+# cronitor.Monitor.put(
+#     key='trading-bot',
+#     type='job',
+#     schedule='* 10 * * 1-5',
+#     notify='LukeLT25@gmail.com'
+# )
 
 def make_webdriver():
     # Import selenium here because it's slow to import
