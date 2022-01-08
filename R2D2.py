@@ -24,7 +24,7 @@ today = datetime.datetime.today()
 print(today.strftime('%D %T'))
 
 
-symbolList = ['NVDA', 'TSLA'] #symbol or symbols to use
+symbolList = ['NVDA', 'AMD'] #symbol or symbols to use
 
 #cron job to start trading bot
 # cronitor.Monitor.put(
@@ -91,13 +91,14 @@ def everyMarketOpen():
         if symbol not in currentlyInvested and close[-2] >= max(highs[:-1]): # checks if we are currently invested, and if the last close was higher than the highest high, buy at market price
             if cashAvailableForTrading > currentSymbolPrice:
                 print('Buy Order placed for ' + symbol + ' at ' + str(currentSymbolPrice) + '\n')
-                client.place_order(config.account_id, equity_buy_market(symbol, 0))
+                client.place_order(config.account_id, equity_buy_market(symbol, 2)) #buy 2
                 breakoutlvl = max(highs[:-1])
                 highestPrice = breakoutlvl
 
 
         orders = client.get_orders_by_path(config.account_id, status=client.Order.Status.FILLED).json()
-        # print('Orders: ' + )
+        print('Orders: ')
+        print(*orders, sep='\n')
         openOrders = []
         for order in orders:
             openOrders.append(order['orderLegCollection'][0]['instrument']['symbol'])
