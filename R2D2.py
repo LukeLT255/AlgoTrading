@@ -121,7 +121,7 @@ def everyMarketOpen():
                 client.replace_order(config.account_id, order_id, equity_sell_limit(symbol, 1, stopPrice))
 
                 print(f'New stop price for {symbol}: ' + str(stopPrice)) #print new stop price to terminal
-        return schedule.CancelJob
+
 
 everyMarketOpen()
 
