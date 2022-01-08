@@ -85,9 +85,9 @@ def everyMarketOpen():
             print('No positions found')
         symbolQuote = client.get_quotes(symbol).json()
         currentSymbolPrice = symbolQuote[symbol]['askPrice']
-        print('Yesterday close: ' + str(close[-2]))
+        print(f'Yesterday close for {symbol}: ' + str(close[-2]))
         h = max(highs[:-1])
-        print('High: ' + str(h))
+        print(f'High for {symbol}: ' + str(h))
         if symbol not in currentlyInvested and close[-2] >= max(highs[:-1]): # checks if we are currently invested, and if the last close was higher than the highest high, buy at market price
             if cashAvailableForTrading > currentSymbolPrice:
                 print('Buy Order placed for ' + symbol + ' at ' + str(currentSymbolPrice) + '\n')
