@@ -87,7 +87,7 @@ def everyMarketOpen():
         currentSymbolPrice = symbolQuote[symbol]['askPrice']
         print(f'Yesterday close for {symbol}: ' + str(close[-2]))
         h = max(highs[:-1])
-        print(f'High for {symbol}: ' + str(h))
+        print(f'High for {symbol} ' + f' in last {lookBack} days: ' + str(h))
         if symbol not in currentlyInvested and close[-2] >= max(highs[:-1]): # checks if we are currently invested, and if the last close was higher than the highest high, buy at market price
             if cashAvailableForTrading > currentSymbolPrice:
                 print('Buy Order placed for ' + symbol + ' at ' + str(currentSymbolPrice) + '\n')
