@@ -108,7 +108,7 @@ def everyMarketOpen():
 
                 print(f'New stop price for {symbol}: ' + str(stopPrice)) #print new stop price to terminal
 
-
-everyMarketOpen()
+if __name__ == '__main__':
+    everyMarketOpen()
 
 # 253747756
