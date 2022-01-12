@@ -3,14 +3,8 @@ from tda.orders.equities import equity_buy_limit, equity_buy_market, equity_sell
 from tda.orders.common import Duration, Session
 import atexit
 import datetime
-import dateutil
-import httpx
-import sys
 import tda
 import config
-# import cronitor
-
-# cronitor.api_key = config.cron_key
 
 lookBack = 20
 initStopRisk = 0.98

@@ -6,6 +6,7 @@ cronitor.api_key = config.cron_key
 
 @cronitor.job('trading-bot')
 def runR2D2():
-    R2D2.everyMarketOpen()
+    print('job ran')
+    # R2D2.everyMarketOpen()
 
 
