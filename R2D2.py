@@ -7,7 +7,7 @@ import tda
 import config
 import logging
 
-logging.basicConfig(filename='R2D2.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='R2D2.log', encoding='utf-8', level=logging.INFO)
 
 
 today = datetime.datetime.today()
@@ -96,7 +96,7 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
-        print('No current positions')
+        logging.debug('No current positions')
 
 def getYesterdayClose(symbol):
     td = datetime.timedelta(4) #goes back till last day close in market
