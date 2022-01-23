@@ -12,7 +12,7 @@ import logging
 
 today = datetime.datetime.today()
 
-logging.basicConfig(filename="newfile.log",
+logging.basicConfig(filename="tradeInfo.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
 
