@@ -7,7 +7,7 @@ import tda
 import config
 import logging
 
-logging.basicConfig(filename='R2D2.log', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(filename='tradeInfo.log', encoding='utf-8', level=logging.INFO)
 
 
 today = datetime.datetime.today()
