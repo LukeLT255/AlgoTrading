@@ -12,7 +12,7 @@ import logging
 
 today = datetime.datetime.today()
 
-logging.basicConfig(filename="/home/ec2-user/AlgoTrading/tradeInfo.log",
+logging.basicConfig(filename="log.txt",
                     format='%(asctime)s %(message)s',
                     filemode='w')
 
