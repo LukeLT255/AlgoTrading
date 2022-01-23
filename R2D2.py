@@ -7,7 +7,7 @@ import tda
 import config
 import logging
 
-logging.basicConfig(filename='tradeInfo.log', encoding='utf-8', level=logging.INFO)
+
 
 
 today = datetime.datetime.today()
@@ -38,6 +38,7 @@ client = tda.auth.easy_client(
 
 
 def everyMarketOpen():
+    logging.basicConfig(filename='tradeInfo.log', encoding='utf-8', level=logging.INFO)
     for symbol in symbolList:
         sevenDayLow = getSevenDayLow(symbol)
         twoHundredDayMovingAverage = getTwoHundredDayMovingAverage(symbol)
@@ -88,6 +89,7 @@ def getSevenDayHigh(symbol):
     return max(highs)
 
 def getCurrentPositions(accountID):
+    logging.basicConfig(filename='tradeInfo.log', encoding='utf-8', level=logging.INFO)
     positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
     currentPositions = []
 
