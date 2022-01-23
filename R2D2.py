@@ -12,9 +12,15 @@ import logging
 
 today = datetime.datetime.today()
 
-logging.basicConfig(filename='/home/ec2-user/AlgoTrading/tradeInfo.log', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(filename="newfile.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
 
-logging.info(today.strftime('%D %T'))
+logger = logging.getLogger()
+
+logger.setLevel(logging.INFO)
+
+logger.info(today.strftime('%D %T'))
 
 
 symbolList = ['NVDA', 'AMD'] #symbol or symbols to use
@@ -52,14 +58,14 @@ def everyMarketOpen():
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
             if currentAccountBalance > currentMarketPrice:
-                logging.info(f'One share of {symbol} bought at {currentMarketPrice}')
+                logger.info(f'One share of {symbol} bought at {currentMarketPrice}')
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
 
 
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
         if yesterdayClosePrice > sevenDayHigh and symbol in currentPositions: #maybe add another check to see if currentMarketPrice is higher than init buy price
-            logging.info(f'One share of {symbol} sold at {currentMarketPrice}')
+            logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
 
@@ -97,7 +103,7 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
-        logging.info('No current positions')
+        logger.info('No current positions')
 
 def getYesterdayClose(symbol):
     td = datetime.timedelta(4) #goes back till last day close in market
