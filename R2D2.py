@@ -96,7 +96,7 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
-        logging.debug('No current positions')
+        logging.info('No current positions')
 
 def getYesterdayClose(symbol):
     td = datetime.timedelta(4) #goes back till last day close in market
