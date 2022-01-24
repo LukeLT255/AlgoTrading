@@ -12,9 +12,7 @@ import logging
 
 today = datetime.datetime.today()
 
-logging.basicConfig(filename="log.txt",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
+logging.basicConfig(filename='log.txt')
 
 logger = logging.getLogger()
 
@@ -38,8 +36,8 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_lightsail,
-    # config.token_path_local,
+    # config.token_path_lightsail,
+    config.token_path_local,
     make_webdriver)
 
 
@@ -58,6 +56,7 @@ def everyMarketOpen():
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
             if currentAccountBalance > currentMarketPrice:
+                print(f'Bought {symbol} at {currentMarketPrice}')
                 logger.info(f'One share of {symbol} bought at {currentMarketPrice}')
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
 
@@ -65,6 +64,7 @@ def everyMarketOpen():
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
         if yesterdayClosePrice > sevenDayHigh and symbol in currentPositions: #maybe add another check to see if currentMarketPrice is higher than init buy price
+            print(f'Sold {symbol}')
             logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
@@ -103,6 +103,7 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
+        print('No current positions')
         logger.info('No current positions')
 
 def getYesterdayClose(symbol):
