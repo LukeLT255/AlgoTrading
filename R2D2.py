@@ -52,10 +52,11 @@ def everyMarketOpen():
         currentAccountBalance = getCurrentAccountBalance(config.account_id)
         currentMarketPrice = getCurrentMarketPrice(symbol)
         initialBuyPrice = currentPositions #figure out way to store initial buy price
-        print('\n')
-        print(f'Seven day low: {sevenDayLow}')
-        print(f'Two hundred day moving average: {twoHundredDayMovingAverage}')
+        print(f'{symbol}')
+        print(f'Seven day low for {symbol}: {sevenDayLow}')
+        print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
         print(f'Current market price: {currentMarketPrice}')
+        print('\n')
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow + 1 and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow + 1:
