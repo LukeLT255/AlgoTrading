@@ -52,6 +52,8 @@ def everyMarketOpen():
         currentAccountBalance = getCurrentAccountBalance(config.account_id)
         currentMarketPrice = getCurrentMarketPrice(symbol)
         initialBuyPrice = currentPositions #figure out way to store initial buy price
+        tradePlaced = False
+
         print(f'{symbol}')
         print(f'Seven day low for {symbol}: {sevenDayLow}')
         print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
@@ -62,17 +64,21 @@ def everyMarketOpen():
         if yesterdayClosePrice < sevenDayLow + 1 and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow + 1:
             if currentAccountBalance > currentMarketPrice:
                 print(f'Bought {symbol} at {currentMarketPrice}')
+                tradePlaced = True
                 # logger.info(f'One share of {symbol} bought at {currentMarketPrice}')
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
 
 
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
-        if yesterdayClosePrice > sevenDayHigh and symbol in currentPositions: #maybe add another check to see if currentMarketPrice is higher than init buy price
-            print(f'Sold {symbol}')
+        if yesterdayClosePrice > sevenDayHigh and currentMarketPrice > sevenDayHigh and symbol in currentPositions: #maybe add another check to see if currentMarketPrice is higher than init buy price
+            print(f'Sold {symbol} at {currentMarketPrice}')
+            tradePlaced = True
             # logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
+        if not tradePlaced:
+            print(f'No trades placed for {symbol}')
 
 def getTwoHundredDayMovingAverage(symbol):
     td = datetime.timedelta(200)
