@@ -71,7 +71,7 @@ def everyMarketOpen():
 
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
-        if yesterdayClosePrice > sevenDayHigh and currentMarketPrice > sevenDayHigh and symbol in currentPositions: #maybe add another check to see if currentMarketPrice is higher than init buy price
+        if yesterdayClosePrice > sevenDayHigh and currentMarketPrice > sevenDayHigh and symbol in currentPositions and currentMarketPrice > twoHundredDayMovingAverage: #maybe add another check to see if currentMarketPrice is higher than init buy price
             print(f'Sold {symbol} at {currentMarketPrice}')
             tradePlaced = True
             # logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
