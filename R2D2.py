@@ -81,6 +81,7 @@ def everyMarketOpen():
 
         if not tradePlaced:
             print(f'No trades placed for {symbol}')
+            print('\n')
 
 def getTwoHundredDayMovingAverage(symbol):
     td = datetime.timedelta(200)
@@ -117,7 +118,7 @@ def getCurrentPositions(accountID):
         return currentPositions
     except KeyError:
         print('No current positions')
-        print('\n')
+
         # logger.info('No current positions')
 
 def getYesterdayClose(symbol):
