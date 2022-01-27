@@ -58,12 +58,13 @@ def everyMarketOpen():
         print(f'Seven day low for {symbol}: {sevenDayLow}')
         print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
         print(f'Current market price: {currentMarketPrice}')
-        print('\n')
+
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow + 1 and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow + 1:
             if currentAccountBalance > currentMarketPrice:
                 print(f'Bought {symbol} at {currentMarketPrice}')
+                print('\n')
                 tradePlaced = True
                 # logger.info(f'One share of {symbol} bought at {currentMarketPrice}')
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
@@ -73,6 +74,7 @@ def everyMarketOpen():
         #sell when it closes above its previous seven day high and is higher than initial buy price
         if yesterdayClosePrice > sevenDayHigh and currentMarketPrice > sevenDayHigh and symbol in currentPositions and currentMarketPrice > twoHundredDayMovingAverage: #maybe add another check to see if currentMarketPrice is higher than init buy price
             print(f'Sold {symbol} at {currentMarketPrice}')
+            print('\n')
             tradePlaced = True
             # logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
@@ -115,6 +117,7 @@ def getCurrentPositions(accountID):
         return currentPositions
     except KeyError:
         print('No current positions')
+        print('\n')
         # logger.info('No current positions')
 
 def getYesterdayClose(symbol):
