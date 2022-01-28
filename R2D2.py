@@ -55,8 +55,8 @@ def everyMarketOpen():
         tradePlaced = False
 
         print(f'{symbol}')
-        print(f'Seven day low for {symbol}: {sevenDayLow}')
         print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
+        print(f'Seven day low for {symbol}: {sevenDayLow}')
         print(f'Current market price: {currentMarketPrice}')
 
 
