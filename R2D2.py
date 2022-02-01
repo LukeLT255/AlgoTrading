@@ -5,20 +5,15 @@ import atexit
 import datetime
 import tda
 import config
-import logging
+import models
+
 
 
 
 
 today = datetime.datetime.today()
 
-logging.basicConfig(filename='log.txt')
 
-logger = logging.getLogger()
-
-# logger.setLevel(logging.INFO)
-
-# logger.info(today.strftime('%D %T'))
 
 
 symbolList = ['NVDA', 'AMD'] #symbol or symbols to use
@@ -57,6 +52,7 @@ def everyMarketOpen():
         print(f'{symbol}')
         print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
         print(f'Seven day low for {symbol}: {sevenDayLow}')
+        print(f'Seven day high for {symbol}: {sevenDayHigh}')
         print(f'Current market price: {currentMarketPrice}')
 
 
@@ -66,7 +62,6 @@ def everyMarketOpen():
                 print(f'Bought {symbol} at {currentMarketPrice}')
                 print('\n')
                 tradePlaced = True
-                # logger.info(f'One share of {symbol} bought at {currentMarketPrice}')
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
 
 
@@ -76,7 +71,6 @@ def everyMarketOpen():
             print(f'Sold {symbol} at {currentMarketPrice}')
             print('\n')
             tradePlaced = True
-            # logger.info(f'One share of {symbol} sold at {currentMarketPrice}')
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
         if not tradePlaced:
@@ -119,7 +113,6 @@ def getCurrentPositions(accountID):
     except KeyError:
         print('No current positions')
 
-        # logger.info('No current positions')
 
 def getYesterdayClose(symbol):
     td = datetime.timedelta(4) #goes back till last day close in market
