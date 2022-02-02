@@ -72,7 +72,7 @@ def everyMarketOpen():
             print(f'Sold {symbol} at {currentMarketPrice}')
             print('\n')
             tradePlaced = True
-            client.place_order(config.account_id, equity_sell_market(symbol, 1))
+            # client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
         if not tradePlaced:
             print(f'No trades placed for {symbol}')
@@ -106,6 +106,7 @@ def getSevenDayHigh(symbol):
 def getCurrentPositions(accountID):
     positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
     currentPositions = []
+    print(positions)
 
     try:
         for position in positions['securitiesAccount']['positions']:
