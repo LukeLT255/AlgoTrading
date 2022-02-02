@@ -54,7 +54,7 @@ def everyMarketOpen():
         print(f'Seven day low for {symbol}: {sevenDayLow}')
         print(f'Seven day high for {symbol}: {sevenDayHigh}')
         print(f'Current market price: {currentMarketPrice}')
-
+        print(currentPositions)
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow + 1 and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow + 1:
@@ -67,7 +67,7 @@ def everyMarketOpen():
 
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
-        if yesterdayClosePrice > sevenDayHigh and currentMarketPrice > sevenDayHigh and symbol in currentPositions and currentMarketPrice > twoHundredDayMovingAverage: #maybe add another check to see if currentMarketPrice is higher than init buy price
+        if currentMarketPrice > sevenDayHigh and symbol in currentPositions and currentMarketPrice > twoHundredDayMovingAverage: #maybe add another check to see if currentMarketPrice is higher than init buy price
             print(f'Sold {symbol} at {currentMarketPrice}')
             print('\n')
             tradePlaced = True
