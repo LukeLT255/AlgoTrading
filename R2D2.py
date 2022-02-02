@@ -12,6 +12,7 @@ import config
 
 
 today = datetime.datetime.today()
+yesterday = datetime.datetime.today() - datetime.timedelta(1)
 
 
 
@@ -79,7 +80,7 @@ def everyMarketOpen():
 
 def getTwoHundredDayMovingAverage(symbol):
     td = datetime.timedelta(200)
-    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=today).json()
+    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     close = []
     for day in priceHistory['candles']:
         close.append(day['close'])
@@ -88,7 +89,7 @@ def getTwoHundredDayMovingAverage(symbol):
 
 def getSevenDayLow(symbol):
     td = datetime.timedelta(9)
-    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=today).json()
+    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     lows = []
     for day in priceHistory['candles']:
         lows.append(day['low'])
@@ -96,7 +97,7 @@ def getSevenDayLow(symbol):
 
 def getSevenDayHigh(symbol):
     td = datetime.timedelta(9)
-    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=today).json()
+    priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     highs = []
     for day in priceHistory['candles']:
         highs.append(day['high'])
