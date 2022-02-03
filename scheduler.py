@@ -5,7 +5,7 @@ import config
 
 cronitor.api_key = config.cron_key
 
-@cronitor.job('TDAmeritrade-trading-bot')
+@cronitor.job('trading-bot')
 def runR2D2():
     R2D2.everyMarketOpen()
 
