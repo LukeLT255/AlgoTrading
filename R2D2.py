@@ -88,7 +88,7 @@ def getTwoHundredDayMovingAverage(symbol):
     return round(movingAverage, 2)
 
 def getSevenDayLow(symbol):
-    td = datetime.timedelta(7)
+    td = datetime.timedelta(8)
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     lows = []
     for day in priceHistory['candles']:
@@ -96,7 +96,7 @@ def getSevenDayLow(symbol):
     return min(lows)
 
 def getSevenDayHigh(symbol):
-    td = datetime.timedelta(7)
+    td = datetime.timedelta(8)
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     highs = []
     for day in priceHistory['candles']:
