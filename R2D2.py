@@ -17,7 +17,7 @@ yesterday = datetime.datetime.today() - datetime.timedelta(1)
 
 
 
-symbolList = ['NVDA', 'AMD'] #symbol or symbols to use
+symbolList = ['NVDA', 'AMD', 'DELL'] #symbol or symbols to use
 
 
 def make_webdriver():
