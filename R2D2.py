@@ -113,7 +113,6 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
-        print('No current positions')
         return currentPositions
 
 
