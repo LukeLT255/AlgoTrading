@@ -17,7 +17,7 @@ yesterday = datetime.datetime.today() - datetime.timedelta(1)
 
 
 
-symbolList = ['NVDA', 'AMD', 'DELL'] #symbol or symbols to use
+symbolList = ['NVDA', 'AMD', 'DELL', 'DVN'] #symbol or symbols to use
 
 
 def make_webdriver():
@@ -113,8 +113,9 @@ def getCurrentPositions(accountID):
             currentPositions.append(position['instrument']['symbol'])
         return currentPositions
     except KeyError:
-        return currentPositions
         print('No current positions')
+        return currentPositions
+
 
 
 def getYesterdayClose(symbol):
