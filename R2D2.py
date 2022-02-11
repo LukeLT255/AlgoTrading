@@ -49,6 +49,7 @@ def everyMarketOpen():
         currentMarketPrice = getCurrentMarketPrice(symbol)
         initialBuyPrice = currentPositions #figure out way to store initial buy price
         tradePlaced = False
+        numberOfShares = getNumberOfShares(symbol, config.account_id)
 
         print(f'{symbol}')
         print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
@@ -56,10 +57,11 @@ def everyMarketOpen():
         print(f'Seven day high for {symbol}: {sevenDayHigh}')
         print(f'Current market price: {currentMarketPrice}')
         print(currentPositions)
+        print(numberOfShares)
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
-            if currentAccountBalance > currentMarketPrice:
+            if currentAccountBalance > currentMarketPrice and config.max_shares > numberOfShares:
                 print(f'Bought {symbol} at {currentMarketPrice}')
                 print('\n')
                 tradePlaced = True
@@ -132,5 +134,17 @@ def getCurrentMarketPrice(symbol):
     quotes = client.get_quote(symbol).json()
     currentMarketPrice = quotes[symbol]['mark']
     return currentMarketPrice
+
+def getNumberOfShares(symbol, accountID):
+    positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
+    numOfShares = 0
+    try:
+        for position in positions['securitiesAccount']['positions']:
+            if position['instrument']['symbol'] == symbol:
+                numOfShares = position['longQuantity']
+        return numOfShares
+    except KeyError:
+        return numOfShares
+
 
 #253747756
