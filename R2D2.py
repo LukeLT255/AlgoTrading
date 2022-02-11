@@ -62,7 +62,7 @@ def everyMarketOpen():
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
-            if currentAccountBalance > currentMarketPrice and config.max_shares > numberOfShares:
+            if currentAccountBalance > currentMarketPrice: #and config.max_shares > numberOfShares:
                 print(f'Bought {symbol} at {currentMarketPrice}')
                 print('\n')
                 tradePlaced = True
