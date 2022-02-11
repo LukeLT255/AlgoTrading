@@ -32,8 +32,8 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_lightsail,
-    # config.token_path_local,
+    # config.token_path_lightsail,
+    config.token_path_local,
     make_webdriver)
 
 
@@ -56,7 +56,6 @@ def everyMarketOpen():
         print(f'Seven day high for {symbol}: {sevenDayHigh}')
         print(f'Current market price: {currentMarketPrice}')
         print(currentPositions)
-        print(currentAccountBalance)
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
@@ -126,7 +125,7 @@ def getYesterdayClose(symbol):
 
 def getCurrentAccountBalance(accountID):
     accountInfo = client.get_account(accountID).json()
-    currentAccountBalance = accountInfo['securitiesAccount']['initialBalances']['cashAvailableForTrading']
+    currentAccountBalance = accountInfo['securitiesAccount']['currentBalances']['cashBalance']
     return currentAccountBalance
 
 def getCurrentMarketPrice(symbol):
