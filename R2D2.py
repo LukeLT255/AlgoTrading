@@ -58,6 +58,7 @@ def everyMarketOpen():
         print(f'Current market price: {currentMarketPrice}')
         print(currentPositions)
         print(numberOfShares)
+        print(currentAccountBalance)
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
