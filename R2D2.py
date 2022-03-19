@@ -5,9 +5,13 @@ import atexit
 import datetime
 import tda
 import config
-# import models
+import logging
 
-
+logging.basicConfig(level=logging.INFO,
+                    format='{asctime} {levelname:<8} {message}',
+                    style='{',
+                    filename='%slog' % __file__[:-2],
+                    filemode='a')
 
 
 
@@ -51,20 +55,20 @@ def everyMarketOpen():
         tradePlaced = False
         numberOfShares = getNumberOfShares(symbol, config.account_id)
 
-        print(f'{symbol}')
-        print(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
-        print(f'Seven day low for {symbol}: {sevenDayLow}')
-        print(f'Seven day high for {symbol}: {sevenDayHigh}')
-        print(f'Current market price: {currentMarketPrice}')
-        print(currentPositions)
-        print(numberOfShares)
-        print(currentAccountBalance)
+        logging.info(f'{symbol}')
+        logging.info(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
+        logging.info(f'Seven day low for {symbol}: {sevenDayLow}')
+        logging.info(f'Seven day high for {symbol}: {sevenDayHigh}')
+        logging.info(f'Current market price: {currentMarketPrice}')
+        logging.info(currentPositions)
+        logging.info(numberOfShares)
+        logging.info(currentAccountBalance)
 
         #buy when current closing price is lower than previous seven day low and above it's 200 day moving average
         if yesterdayClosePrice < sevenDayLow and yesterdayClosePrice > twoHundredDayMovingAverage and currentMarketPrice < sevenDayLow:
             if currentAccountBalance > currentMarketPrice: #and config.max_shares > numberOfShares:
-                print(f'Bought {symbol} at {currentMarketPrice}')
-                print('\n')
+                logging.info(f'Bought {symbol} at {currentMarketPrice}')
+                logging.info('\n')
                 tradePlaced = True
                 client.place_order(config.account_id, equity_buy_market(symbol, 1))
 
@@ -72,14 +76,14 @@ def everyMarketOpen():
 
         #sell when it closes above its previous seven day high and is higher than initial buy price
         if currentMarketPrice > sevenDayHigh and symbol in currentPositions and currentMarketPrice > twoHundredDayMovingAverage: #maybe add another check to see if currentMarketPrice is higher than init buy price
-            print(f'Sold {symbol} at {currentMarketPrice}')
-            print('\n')
+            logging.info(f'Sold {symbol} at {currentMarketPrice}')
+            logging.info('\n')
             tradePlaced = True
             client.place_order(config.account_id, equity_sell_market(symbol, 1))
 
         if not tradePlaced:
-            print(f'No trades placed for {symbol}')
-            print('\n')
+            logging.info(f'No trades placed for {symbol}')
+            logging.info('\n')
 
 def getTwoHundredDayMovingAverage(symbol):
     td = datetime.timedelta(200)
