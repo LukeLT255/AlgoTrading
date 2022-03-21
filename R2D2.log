@@ -1,0 +1,335 @@
+2022-03-21 14:00:59,707 INFO     Loading token from file /Users/luketyson/PycharmProjects/AlgoTrading/token.pickle
+2022-03-21 14:00:59,707 INFO     Loaded metadata aware token with creation timestamp 1641178221
+2022-03-21 14:00:59,739 INFO     Returning client loaded from token file '/Users/luketyson/PycharmProjects/AlgoTrading/token.pickle'
+2022-03-21 14:01:00,225 INFO     Updating refresh token:
+ - Current timestamp is 1647885660
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:00,225 INFO     Skipping refresh token update
+2022-03-21 14:01:00,546 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:00,547 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:00,550 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:00,550 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:00,550 INFO     Updating refresh token:
+ - Current timestamp is 1647885660
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:00,550 INFO     Skipping refresh token update
+2022-03-21 14:01:00,695 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:00,695 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:00,699 INFO     We detected language [('English', 0.9412), ('Dutch', 0.9294), ('German', 0.8824)] using ascii
+2022-03-21 14:01:00,699 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:00,701 INFO     Updating refresh token:
+ - Current timestamp is 1647885660
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:00,701 INFO     Skipping refresh token update
+2022-03-21 14:01:00,791 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:00,791 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:00,791 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:00,791 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:00,792 INFO     Updating refresh token:
+ - Current timestamp is 1647885660
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:00,792 INFO     Skipping refresh token update
+2022-03-21 14:01:00,888 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,066 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,069 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:01,069 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,070 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,070 INFO     Skipping refresh token update
+2022-03-21 14:01:01,166 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,166 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,167 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:01,167 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,167 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,168 INFO     Skipping refresh token update
+2022-03-21 14:01:01,274 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,275 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,276 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:01,276 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,277 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,277 INFO     Skipping refresh token update
+2022-03-21 14:01:01,365 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,366 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,367 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:01,367 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,368 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,368 INFO     Skipping refresh token update
+2022-03-21 14:01:01,464 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,465 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,465 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:01,465 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,465 INFO     NVDA
+2022-03-21 14:01:01,466 INFO     Two hundred day simple moving average: 175.38
+2022-03-21 14:01:01,466 INFO     Seven day low for NVDA: 211.5901
+2022-03-21 14:01:01,466 INFO     Seven day high for NVDA: 265.6899
+2022-03-21 14:01:01,466 INFO     Current market price: 263.86
+2022-03-21 14:01:01,466 INFO     ['DELL']
+2022-03-21 14:01:01,466 INFO     0
+2022-03-21 14:01:01,466 INFO     634.39
+2022-03-21 14:01:01,466 INFO     No trades placed for NVDA
+2022-03-21 14:01:01,466 INFO     
+
+2022-03-21 14:01:01,466 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,466 INFO     Skipping refresh token update
+2022-03-21 14:01:01,598 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,598 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,599 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:01,599 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,600 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,600 INFO     Skipping refresh token update
+2022-03-21 14:01:01,741 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,741 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,745 INFO     We detected language [('English', 0.9412), ('Dutch', 0.9412), ('German', 0.8824)] using ascii
+2022-03-21 14:01:01,745 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,746 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,746 INFO     Skipping refresh token update
+2022-03-21 14:01:01,836 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,836 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,836 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:01,836 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,837 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,837 INFO     Skipping refresh token update
+2022-03-21 14:01:01,936 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:01,937 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:01,937 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:01,937 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:01,937 INFO     Updating refresh token:
+ - Current timestamp is 1647885661
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:01,937 INFO     Skipping refresh token update
+2022-03-21 14:01:02,037 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,038 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,039 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:02,039 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,039 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,039 INFO     Skipping refresh token update
+2022-03-21 14:01:02,133 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,134 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,134 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:02,134 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,134 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,134 INFO     Skipping refresh token update
+2022-03-21 14:01:02,230 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,230 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,231 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:02,231 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,232 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,232 INFO     Skipping refresh token update
+2022-03-21 14:01:02,333 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,333 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,333 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:02,334 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,334 INFO     AMD
+2022-03-21 14:01:02,334 INFO     Two hundred day simple moving average: 85.27
+2022-03-21 14:01:02,334 INFO     Seven day low for AMD: 101.04
+2022-03-21 14:01:02,334 INFO     Seven day high for AMD: 115.42
+2022-03-21 14:01:02,334 INFO     Current market price: 114.39
+2022-03-21 14:01:02,334 INFO     ['DELL']
+2022-03-21 14:01:02,334 INFO     0
+2022-03-21 14:01:02,334 INFO     634.39
+2022-03-21 14:01:02,334 INFO     No trades placed for AMD
+2022-03-21 14:01:02,335 INFO     
+
+2022-03-21 14:01:02,335 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,335 INFO     Skipping refresh token update
+2022-03-21 14:01:02,422 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,423 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,424 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:02,424 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,424 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,424 INFO     Skipping refresh token update
+2022-03-21 14:01:02,558 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,558 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,561 INFO     We detected language [('English', 0.9412), ('Dutch', 0.9412), ('German', 0.8942)] using ascii
+2022-03-21 14:01:02,561 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,563 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,563 INFO     Skipping refresh token update
+2022-03-21 14:01:02,688 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,688 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,688 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:02,689 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,689 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,689 INFO     Skipping refresh token update
+2022-03-21 14:01:02,834 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,834 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,836 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:02,836 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,836 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,836 INFO     Skipping refresh token update
+2022-03-21 14:01:02,920 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:02,920 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:02,921 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:02,921 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:02,921 INFO     Updating refresh token:
+ - Current timestamp is 1647885662
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:02,922 INFO     Skipping refresh token update
+2022-03-21 14:01:03,016 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,017 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,018 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,018 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,019 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,019 INFO     Skipping refresh token update
+2022-03-21 14:01:03,145 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,146 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,148 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,148 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,148 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,148 INFO     Skipping refresh token update
+2022-03-21 14:01:03,234 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,234 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,234 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,234 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,235 INFO     DELL
+2022-03-21 14:01:03,235 INFO     Two hundred day simple moving average: 37.82
+2022-03-21 14:01:03,235 INFO     Seven day low for DELL: 49.52
+2022-03-21 14:01:03,235 INFO     Seven day high for DELL: 52.56
+2022-03-21 14:01:03,235 INFO     Current market price: 52.2
+2022-03-21 14:01:03,235 INFO     ['DELL']
+2022-03-21 14:01:03,235 INFO     38.0
+2022-03-21 14:01:03,235 INFO     634.39
+2022-03-21 14:01:03,235 INFO     No trades placed for DELL
+2022-03-21 14:01:03,235 INFO     
+
+2022-03-21 14:01:03,236 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,236 INFO     Skipping refresh token update
+2022-03-21 14:01:03,322 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,322 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,324 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:03,324 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,324 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,324 INFO     Skipping refresh token update
+2022-03-21 14:01:03,462 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,462 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,465 INFO     We detected language [('English', 0.9412), ('Dutch', 0.9412), ('German', 0.8942)] using ascii
+2022-03-21 14:01:03,465 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,467 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,467 INFO     Skipping refresh token update
+2022-03-21 14:01:03,545 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,545 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,545 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:03,545 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,546 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,546 INFO     Skipping refresh token update
+2022-03-21 14:01:03,644 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,644 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,645 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,646 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,646 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,646 INFO     Skipping refresh token update
+2022-03-21 14:01:03,722 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,723 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,724 INFO     We detected language [('English', 1.0), ('Dutch', 1.0), ('Norwegian', 1.0)] using ascii
+2022-03-21 14:01:03,724 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,724 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,724 INFO     Skipping refresh token update
+2022-03-21 14:01:03,845 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,845 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,847 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,847 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,847 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,847 INFO     Skipping refresh token update
+2022-03-21 14:01:03,935 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:03,935 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:03,936 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:03,936 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:03,937 INFO     Updating refresh token:
+ - Current timestamp is 1647885663
+ - Token creation timestamp is 1641178221
+ - Update interval is 7344000 seconds
+2022-03-21 14:01:03,937 INFO     Skipping refresh token update
+2022-03-21 14:01:04,060 INFO     ascii passed initial chaos probing. Mean measured chaos is 0.000000 %
+2022-03-21 14:01:04,060 INFO     ascii should target any language(s) of ['Latin Based']
+2022-03-21 14:01:04,060 INFO     We detected language [('English', 1.0), ('Indonesian', 1.0), ('Simple English', 1.0)] using ascii
+2022-03-21 14:01:04,060 INFO     ascii is most likely the one. Stopping the process.
+2022-03-21 14:01:04,061 INFO     DVN
+2022-03-21 14:01:04,061 INFO     Two hundred day simple moving average: 30.42
+2022-03-21 14:01:04,061 INFO     Seven day low for DVN: 50.2
+2022-03-21 14:01:04,061 INFO     Seven day high for DVN: 58.6264
+2022-03-21 14:01:04,061 INFO     Current market price: 60.64
+2022-03-21 14:01:04,061 INFO     ['DELL']
+2022-03-21 14:01:04,061 INFO     0
+2022-03-21 14:01:04,061 INFO     634.39
+2022-03-21 14:01:04,061 INFO     No trades placed for DVN
+2022-03-21 14:01:04,061 INFO     
+
