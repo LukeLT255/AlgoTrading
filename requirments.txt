@@ -4,4 +4,3 @@ numpy
 schedule
 datetime
 cronitor
-sqlalchemy
