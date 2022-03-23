@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 today = datetime.datetime.today()
 yesterday = datetime.datetime.today() - datetime.timedelta(1)
 
-symbolList = ['NVDA', 'AMD', 'DELL', 'DVN']  # symbol or symbols to use
+symbolList = ['NVDA', 'AMD']  # symbol or symbols to use
 
 
 def make_webdriver():
@@ -32,8 +32,8 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_lightsail,
-    # config.token_path_local,
+    # config.token_path_lightsail,
+    config.token_path_local,
     make_webdriver)
 
 
