@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO,
                     format='{asctime} {levelname:<8} {message}',
                     style='{',
                     force=True,
-                    filename='R2D2.log',
+                    filename='/home/ec2-user/AlgoTrading/R2D2.log',
                     filemode='a')
 
 today = datetime.datetime.today()
