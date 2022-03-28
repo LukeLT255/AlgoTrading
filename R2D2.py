@@ -9,7 +9,7 @@ import config
 logging.basicConfig(level=logging.INFO,
                     format='{asctime} {levelname:<8} {message}',
                     style='{',
-                    force=True,
+                    # force=True,
                     filename='/home/ec2-user/AlgoTrading/R2D2.log',
                     filemode='a')
 
