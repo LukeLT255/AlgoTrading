@@ -49,7 +49,7 @@ def everyMarketOpen():
         initialBuyPrice = currentPositions  # figure out way to store initial buy price
         tradePlaced = False
         numberOfShares = getNumberOfShares(symbol, config.account_id)
-
+        print('Program working')
         logging.info(f'{symbol}')
         logging.info(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
         logging.info(f'Seven day low for {symbol}: {sevenDayLow}')
