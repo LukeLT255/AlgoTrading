@@ -5,6 +5,8 @@ import atexit
 import datetime
 import tda
 import config
+from app import db
+from app import Account
 
 logging.basicConfig(level=logging.INFO,
                     format='{asctime} {levelname:<8} {message}',
@@ -38,6 +40,11 @@ client = tda.auth.easy_client(
 
 
 def everyMarketOpen():
+    account_value = get_total_account_value(config.account_id, symbolList)
+    accountValue = Account(currentValue=account_value)
+    db.session.add(accountValue)
+    db.session.commit()
+
     for symbol in symbolList:
         sevenDayLow = getSevenDayLow(symbol)
         twoHundredDayMovingAverage = getTwoHundredDayMovingAverage(symbol)
@@ -149,5 +156,19 @@ def getNumberOfShares(symbol, accountID):
         return numOfShares
     except KeyError:
         return numOfShares
+
+def get_total_account_value(accountID, symbols):
+    balance = getCurrentAccountBalance(accountID)
+
+    for symbol in symbols:
+        numberOfShares = getNumberOfShares(accountID, symbol)
+        symbolValue = getCurrentMarketPrice(symbol)
+        value = symbolValue * numberOfShares
+        balance += round(value, 2)
+
+    return balance
+
+
+
 
 # 253747756
