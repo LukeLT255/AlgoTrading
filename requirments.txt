@@ -6,3 +6,4 @@ datetime
 cronitor
 flask
 flask_sqlalchemy
+gunicorn
