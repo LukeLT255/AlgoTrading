@@ -34,7 +34,7 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_lightsail,
+    config.token_path_ubuntu,
     # config.token_path_local,
     make_webdriver)
 
