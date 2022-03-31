@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO,
                     format='{asctime} {levelname:<8} {message}',
                     style='{',
                     # force=True,
-                    filename='/home/ec2-user/AlgoTrading/R2D2.log',
+                    filename='%slog' % __file__[:-2],
                     filemode='a')
 
 today = datetime.datetime.today()
