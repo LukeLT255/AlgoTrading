@@ -1,1 +1,1 @@
-web: flask db upgrade; flask translate compile; gunicorn algotrading:app
+worker: python app.py
