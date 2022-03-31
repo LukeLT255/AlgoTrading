@@ -41,7 +41,7 @@ client = tda.auth.easy_client(
 
 def everyMarketOpen():
     account_value = get_total_account_value(config.account_id, symbolList)
-    accountValue = Account(currentValue=account_value)
+    accountValue = Account(value=account_value)
     db.session.add(accountValue)
     db.session.commit()
 
