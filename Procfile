@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn AlgoTrading:app
+web: flask db upgrade; gunicorn app:app
