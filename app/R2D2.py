@@ -1,6 +1,5 @@
 import logging
-from tda.orders.equities import equity_buy_limit, equity_buy_market, equity_sell_limit, equity_sell_market
-from tda.orders.common import Duration, Session
+from tda.orders.equities import equity_buy_market, equity_sell_market
 import atexit
 import datetime
 import tda
@@ -34,8 +33,8 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_ubuntu,
-    # config.token_path_local,
+    # config.token_path_ubuntu,
+    config.token_path_local,
     make_webdriver)
 
 
