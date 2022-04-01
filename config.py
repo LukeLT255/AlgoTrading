@@ -1,6 +1,6 @@
 
 api_key = 'YQ844XGKN5WIVC04YE47ALML9EKRAAVD@AMER.OAUTHAP'
-token_path_local = '/Users/luketyson/PycharmProjects/AlgoTrading/token.pickle'
+token_path_local = '/token.pickle'
 token_path_ubuntu = '/home/ubuntu/AlgoTrading/token.pickle'
 redirect_uri = 'https://localhost'
 account_id = 253530748
