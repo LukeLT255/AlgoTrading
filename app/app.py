@@ -1,8 +1,9 @@
 from datetime import datetime
 from flask import Flask
-app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
 import gunicorn
+
+app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
