@@ -11,7 +11,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', '').replace(
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '').replace(
         'postgres://', 'postgresql://') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
 db = SQLAlchemy(app)
