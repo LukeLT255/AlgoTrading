@@ -165,7 +165,6 @@ def get_total_account_value(accountID, symbols):
 
     accountInfo = client.get_account(accountID).json()
     currentAccountBalance = accountInfo['securitiesAccount']['currentBalances']['cashBalance']
-    print(currentAccountBalance)
 
     for symbol in symbols:
         positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
@@ -176,11 +175,8 @@ def get_total_account_value(accountID, symbols):
                     numOfShares = position['longQuantity']
         except KeyError:
             pass
-        print(numOfShares)
         symbolValue = getCurrentMarketPrice(symbol)
-        print(symbolValue)
         value = symbolValue * numOfShares
-        print(value)
         currentAccountBalance += round(value, 2)
 
     return currentAccountBalance
