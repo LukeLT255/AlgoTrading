@@ -669,3 +669,6 @@
 2022-03-23 14:08:26,917 INFO     No trades placed for DVN
 2022-03-23 14:08:26,917 INFO     
 
+2022-04-03 12:34:41,100 INFO     Loading token from file /Users/luketyson/PycharmProjects/AlgoTrading/token.pickle
+2022-04-03 12:34:41,102 INFO     Loaded metadata aware token with creation timestamp 1648658506
+2022-04-03 12:34:41,127 INFO     Returning client loaded from token file '/Users/luketyson/PycharmProjects/AlgoTrading/token.pickle'

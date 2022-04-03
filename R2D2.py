@@ -6,6 +6,7 @@ import tda
 import config
 from app import db
 from app import Account
+import time
 
 logging.basicConfig(level=logging.INFO,
                     format='{asctime} {levelname:<8} {message}',
@@ -33,16 +34,12 @@ def make_webdriver():
 client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
-    config.token_path_ubuntu,
-    # config.token_path_local,
+    # config.token_path_ubuntu,
+    config.token_path_local,
     make_webdriver)
 
 
 def everyMarketOpen():
-    account_value = get_total_account_value(config.account_id, symbolList)
-    accountValue = Account(value=account_value)
-    db.session.add(accountValue)
-    db.session.commit()
 
     for symbol in symbolList:
         sevenDayLow = getSevenDayLow(symbol)
@@ -55,7 +52,7 @@ def everyMarketOpen():
         initialBuyPrice = currentPositions  # figure out way to store initial buy price
         tradePlaced = False
         numberOfShares = getNumberOfShares(symbol, config.account_id)
-        print('Program working')
+
         logging.info(f'{symbol}')
         logging.info(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
         logging.info(f'Seven day low for {symbol}: {sevenDayLow}')
@@ -83,6 +80,12 @@ def everyMarketOpen():
         if not tradePlaced:
             logging.info(f'No trades placed for {symbol}')
             logging.info('\n')
+
+    account_value = get_total_account_value(config.account_id, symbolList)
+    accountValue = Account(value=account_value)
+    db.session.add(accountValue)
+    db.session.commit()
+
 
 
 def getTwoHundredDayMovingAverage(symbol):
@@ -157,15 +160,29 @@ def getNumberOfShares(symbol, accountID):
         return numOfShares
 
 def get_total_account_value(accountID, symbols):
-    balance = getCurrentAccountBalance(accountID)
+    # balance = getCurrentAccountBalance(accountID)
+
+    accountInfo = client.get_account(accountID).json()
+    currentAccountBalance = accountInfo['securitiesAccount']['currentBalances']['cashBalance']
+    print(currentAccountBalance)
 
     for symbol in symbols:
-        numberOfShares = getNumberOfShares(accountID, symbol)
+        positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
+        numOfShares = 0
+        try:
+            for position in positions['securitiesAccount']['positions']:
+                if position['instrument']['symbol'] == symbol:
+                    numOfShares = position['longQuantity']
+        except KeyError:
+            pass
+        print(numOfShares)
         symbolValue = getCurrentMarketPrice(symbol)
-        value = symbolValue * numberOfShares
-        balance += round(value, 2)
+        print(symbolValue)
+        value = symbolValue * numOfShares
+        print(value)
+        currentAccountBalance += round(value, 2)
 
-    return balance
+    return currentAccountBalance
 
 
 
