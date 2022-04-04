@@ -179,7 +179,7 @@ def get_total_account_value(accountID, symbols):
         value = symbolValue * numOfShares
         currentAccountBalance += round(value, 2)
 
-    return currentAccountBalance
+    return round(currentAccountBalance, 2)
 
 
 
