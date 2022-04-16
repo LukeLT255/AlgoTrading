@@ -38,7 +38,7 @@ client = tda.auth.easy_client(
     make_webdriver)
 
 
-def every_market_open():
+def make_trades():
 
     for symbol in symbolList:
         sevenDayLow = get_seven_day_low(symbol)

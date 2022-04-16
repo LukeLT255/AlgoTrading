@@ -1,0 +1,7 @@
+HI!
+
+This app makes buy and sell trades for a specified list of stocks.
+The scheduler.py program runs the function in R2D2.py called make_trades().
+This app uses the TD Ameritrade API to place orders.
+
+Thanks for checking it out!
