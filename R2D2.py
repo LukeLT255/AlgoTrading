@@ -35,24 +35,21 @@ client = tda.auth.easy_client(
     config.api_key,
     config.redirect_uri,
     config.token_path,
-    # config.token_path_ubuntu,
-    # config.token_path_local,
     make_webdriver)
 
 
-def everyMarketOpen():
+def every_market_open():
 
     for symbol in symbolList:
-        sevenDayLow = getSevenDayLow(symbol)
-        twoHundredDayMovingAverage = getTwoHundredDayMovingAverage(symbol)
-        sevenDayHigh = getSevenDayHigh(symbol)
-        currentPositions = getCurrentPositions(config.account_id)
-        yesterdayClosePrice = getYesterdayClose(symbol)
-        currentAccountBalance = getCurrentAccountBalance(config.account_id)
-        currentMarketPrice = getCurrentMarketPrice(symbol)
-        initialBuyPrice = currentPositions  # figure out way to store initial buy price
+        sevenDayLow = get_seven_day_low(symbol)
+        twoHundredDayMovingAverage = get_two_hundred_day_moving_average(symbol)
+        sevenDayHigh = get_seven_day_high(symbol)
+        currentPositions = get_current_positions(config.account_id)
+        yesterdayClosePrice = get_yesterday_close(symbol)
+        currentAccountBalance = get_current_account_balance(config.account_id)
+        currentMarketPrice = get_current_market_price(symbol)
         tradePlaced = False
-        numberOfShares = getNumberOfShares(symbol, config.account_id)
+        numberOfShares = get_number_of_shares(symbol, config.account_id)
 
         logging.info(f'{symbol}')
         logging.info(f'Two hundred day simple moving average: {twoHundredDayMovingAverage}')
@@ -88,8 +85,7 @@ def everyMarketOpen():
     db.session.commit()
 
 
-
-def getTwoHundredDayMovingAverage(symbol):
+def get_two_hundred_day_moving_average(symbol):
     td = datetime.timedelta(200)
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     close = []
@@ -99,7 +95,7 @@ def getTwoHundredDayMovingAverage(symbol):
     return round(movingAverage, 2)
 
 
-def getSevenDayLow(symbol):
+def get_seven_day_low(symbol):
     td = datetime.timedelta(8)
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     lows = []
@@ -108,7 +104,7 @@ def getSevenDayLow(symbol):
     return min(lows)
 
 
-def getSevenDayHigh(symbol):
+def get_seven_day_high(symbol):
     td = datetime.timedelta(8)
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=yesterday).json()
     highs = []
@@ -117,7 +113,7 @@ def getSevenDayHigh(symbol):
     return max(highs)
 
 
-def getCurrentPositions(accountID):
+def get_current_positions(accountID):
     positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
     currentPositions = []
     # print(positions)
@@ -130,26 +126,26 @@ def getCurrentPositions(accountID):
         return currentPositions
 
 
-def getYesterdayClose(symbol):
+def get_yesterday_close(symbol):
     td = datetime.timedelta(4)  # goes back till last day close in market
     priceHistory = client.get_price_history_every_day(symbol, start_datetime=today - td, end_datetime=today).json()
     yesterdayClose = priceHistory['candles'][-1]['close']
     return yesterdayClose
 
 
-def getCurrentAccountBalance(accountID):
+def get_current_account_balance(accountID):
     accountInfo = client.get_account(accountID).json()
     currentAccountBalance = accountInfo['securitiesAccount']['currentBalances']['cashBalance']
     return currentAccountBalance
 
 
-def getCurrentMarketPrice(symbol):
+def get_current_market_price(symbol):
     quotes = client.get_quote(symbol).json()
     currentMarketPrice = quotes[symbol]['mark']
     return currentMarketPrice
 
 
-def getNumberOfShares(symbol, accountID):
+def get_number_of_shares(symbol, accountID):
     positions = client.get_account(accountID, fields=client.Account.Fields.POSITIONS).json()
     numOfShares = 0
     try:
