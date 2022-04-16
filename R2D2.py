@@ -171,7 +171,7 @@ def get_total_account_value(accountID, symbols):
                     numOfShares = position['longQuantity']
         except KeyError:
             pass
-        symbolValue = getCurrentMarketPrice(symbol)
+        symbolValue = get_current_market_price(symbol)
         value = symbolValue * numOfShares
         currentAccountBalance += round(value, 2)
 
