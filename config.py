@@ -1,7 +1,8 @@
 import os
+from decouple import config
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-api_key = 'YQ844XGKN5WIVC04YE47ALML9EKRAAVD@AMER.OAUTHAP'
+api_key = config("api_key")
 # token_path_local = '/Users/luketyson/PycharmProjects/AlgoTrading/token.pickle'
 # token_path_ubuntu = '/home/ubuntu/AlgoTrading/token.pickle'
 token_path = os.path.join(basedir, 'token.pickle')
